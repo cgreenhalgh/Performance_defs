@@ -1,6 +1,10 @@
 {
   "@context": {
-    "@base": "http://localhost:8000/annalist/c/Performance_defs/./",
+    "@base": "http://localhost:8080/annalist/c/Performance_defs/./",
+    "@errs": [
+      "Incompatible value type for property frbroo:R10_has_member in field Has_Part (new {'@type': '@id', 'fid': u'Has_Part_r', 'subfid': u'Has_Part'}; was {'fid': u'Has_Part_r', 'vid': u'Performed_work', '@container': '@list'})",
+      "Incompatible container type for property frbroo:R10_has_member in field Has_Part (new {'@type': '@id', 'fid': u'Has_Part_r', 'subfid': u'Has_Part'}; was {'err': u\"Incompatible value type for property frbroo:R10_has_member in field Has_Part (new {'@type': '@id', 'fid': u'Has_Part_r', 'subfid': u'Has_Part'}; was {'fid': u'Has_Part_r', 'vid': u'Performed_work', '@container': '@list'})\", 'fid': u'Has_Part_r', 'vid': u'Performed_work', '@container': '@list'})"
+    ],
     "annal": "http://purl.org/annalist/2014/#",
     "annal:alias_source": {
       "@type": "@id",
@@ -110,7 +114,7 @@
     },
     "annal:id": {
       "fid": "Entity_id",
-      "vid": "_initial_values"
+      "vid": "Included_image"
     },
     "annal:inherit_from": {
       "@type": "@id",
@@ -128,8 +132,8 @@
     },
     "annal:member": {
       "@container": "@list",
-      "fid": "Event_r",
-      "vid": "Artifact"
+      "fid": "Composer_r",
+      "vid": "Part_of_Work"
     },
     "annal:meta_comment": {
       "fid": "Coll_comment",
@@ -179,7 +183,7 @@
     },
     "annal:type_id": {
       "fid": "Entity_type",
-      "vid": "_initial_values"
+      "vid": "Included_image"
     },
     "annal:type_list": {
       "@type": "@id",
@@ -221,6 +225,14 @@
       "fid": "Journal_date",
       "vid": "Journal_entry"
     },
+    "coll:imported_audio": {
+      "fid": "Imported_audio",
+      "vid": "Imported_audio"
+    },
+    "coll:imported_image": {
+      "fid": "Imported_image",
+      "vid": "Imported_image"
+    },
     "coll:linked_audio_clips": {
       "@container": "@list",
       "fid": "Linked_audio_r",
@@ -233,8 +245,8 @@
     },
     "coll:linked_image": {
       "@type": "@id",
-      "fid": "Linked_image",
-      "vid": "Linked_image"
+      "fid": "Linked_image_r",
+      "subfid": "Linked_image_m"
     },
     "coll:linked_images": {
       "@container": "@list",
@@ -249,10 +261,18 @@
       "fid": "Moderated",
       "vid": "Feedback"
     },
+    "coll:part_id": {
+      "fid": "Part_ID",
+      "vid": "Part_of_Work"
+    },
+    "coll:part_rank": {
+      "fid": "Part_Rank",
+      "vid": "Part_of_Work"
+    },
     "coll:performs_role": {
       "@container": "@list",
       "fid": "Role_r",
-      "vid": "Ensemble"
+      "vid": "Performer"
     },
     "coll:rating": {
       "fid": "Star_rating",
@@ -272,6 +292,10 @@
       "@container": "@list",
       "fid": "Web_resource_r",
       "vid": "Journal_entry"
+    },
+    "coll:system_id": {
+      "fid": "System_ID",
+      "vid": "Performance"
     },
     "coll:uploaded_audio": {
       "fid": "Uploaded_audio",
@@ -299,7 +323,7 @@
     "coll:uploaded_image_r": {
       "@container": "@list",
       "fid": "Uploaded_image_r",
-      "vid": "Concert"
+      "vid": "Journal_entry"
     },
     "coll:web_resource": {
       "@type": "@id",
@@ -325,17 +349,17 @@
     "crm:P126_employed_r": {
       "@container": "@list",
       "fid": "Employed_r",
-      "vid": "Construction"
+      "vid": "Event"
     },
     "crm:P12i_was_present_at": {
       "@type": "@id",
-      "fid": "Event_r",
-      "subfid": "Event_m"
+      "fid": "Performer_r",
+      "subfid": "Performer"
     },
     "crm:P7_took_place_at": {
       "@type": "@id",
       "fid": "Place",
-      "vid": "Concert"
+      "vid": "Event"
     },
     "crm:P89_falls_within": {
       "@type": "@id",
@@ -352,8 +376,15 @@
       "fid": "Place_contains_r",
       "vid": "Place"
     },
+    "dc": "http://purl.org/dc/elements/1.1/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "frbroo": "http://erlangen-crm.org/efrbroo/",
+    "frbroo:R10_has_member": {
+      "@container": "@list",
+      "err": "Incompatible container type for property frbroo:R10_has_member in field Has_Part (new {'@type': '@id', 'fid': u'Has_Part_r', 'subfid': u'Has_Part'}; was {'err': u\"Incompatible value type for property frbroo:R10_has_member in field Has_Part (new {'@type': '@id', 'fid': u'Has_Part_r', 'subfid': u'Has_Part'}; was {'fid': u'Has_Part_r', 'vid': u'Performed_work', '@container': '@list'})\", 'fid': u'Has_Part_r', 'vid': u'Performed_work', '@container': '@list'})",
+      "fid": "Has_Part_r",
+      "vid": "Performed_work"
+    },
     "frbroo:R25F_performed": {
       "@type": "@id",
       "fid": "Played_r",
@@ -362,7 +393,7 @@
     "frbroo:R25F_performed_r": {
       "@container": "@list",
       "fid": "Played_r",
-      "vid": "Concert"
+      "vid": "Performance"
     },
     "import_name": "annal:import_name",
     "import_url": {
@@ -389,17 +420,17 @@
     },
     "prov:hadRole": {
       "@type": "@id",
-      "fid": "Performer_r",
+      "fid": "Person_r",
       "subfid": "Role"
     },
     "prov:qualifiedAssociation": {
       "@container": "@list",
-      "fid": "Performer_r",
-      "vid": "Concert"
+      "fid": "Person_r",
+      "vid": "Event"
     },
     "prov:startedAtTime": {
       "fid": "Event_date_time",
-      "vid": "Concert"
+      "vid": "Performance"
     },
     "prov:used": {
       "@type": "@id",
@@ -409,7 +440,7 @@
     "prov:used_r": {
       "@container": "@list",
       "fid": "Used_r",
-      "vid": "Concert"
+      "vid": "Event"
     },
     "prov:wasAttributedTo": {
       "@type": "@id",
@@ -420,11 +451,11 @@
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "rdfs:comment": {
       "fid": "Entity_comment",
-      "vid": "_initial_values"
+      "vid": "Included_image"
     },
     "rdfs:label": {
       "fid": "Entity_label",
-      "vid": "_initial_values"
+      "vid": "Included_image"
     },
     "rdfs:seeAlso": {
       "@container": "@set",
@@ -439,5 +470,5 @@
     "uploaded_size": "annal:uploaded_size",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "_comment": "Generated by generate_coll_jsonld_context on 2017-05-05 14:22:45"
+  "_comment": "Generated by generate_coll_jsonld_context on 2017-06-06 21:40:31"
 }

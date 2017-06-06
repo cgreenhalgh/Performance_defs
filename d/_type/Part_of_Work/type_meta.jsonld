@@ -1,0 +1,26 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "_type/Part_of_Work",
+  "@type": [
+    "annal:Type"
+  ],
+  "annal:field_aliases": [],
+  "annal:id": "Part_of_Work",
+  "annal:supertype_uri": [
+    {
+      "@id": "frbroo:F20_Performance_Work"
+    }
+  ],
+  "annal:type": "annal:Type",
+  "annal:type_id": "_type",
+  "annal:type_list": "_list/Default_list",
+  "annal:type_view": "_view/Part_of_Work",
+  "annal:uri": "coll:Part_of_Work",
+  "rdfs:comment": "Part of a Performed Work, e.g. a Movement or a Fragment",
+  "rdfs:label": "Part of Work"
+}
