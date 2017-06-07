@@ -1,0 +1,23 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "_vocab/event",
+  "@type": [
+    "annal:Vocabulary"
+  ],
+  "annal:id": "event",
+  "annal:type": "annal:Vocabulary",
+  "annal:type_id": "_vocab",
+  "annal:uri": "http://purl.org/NET/c4dm/event.owl#",
+  "rdfs:comment": "C4DM Event ontology",
+  "rdfs:label": "C4DM Event ontology",
+  "rdfs:seeAlso": [
+    {
+      "@id": "http://motools.sourceforge.net/event/event.html"
+    }
+  ]
+}

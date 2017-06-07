@@ -62,9 +62,9 @@
       "annal:property_uri": ""
     },
     {
-      "annal:field_id": null,
-      "annal:field_placement": null,
-      "annal:property_uri": null
+      "annal:field_id": "_field/Sub_Event_r",
+      "annal:field_placement": "small:0,12",
+      "annal:property_uri": ""
     }
   ],
   "rdfs:comment": "Display/edit details of a generic event or activity",
